@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./landing/Images/ATS_LOGO_VECTOR-02.png" type="image/x-icon">
+    <link rel="stylesheet" href="./landing/CSS/style.css">
+
+
+    <title>|ATENAS| Log in</title>
+</head>
+
+<body>
+    <main>
+        <section class="card">
+            <div class="card-login">
+                <form action="log in" method="post" class="form-body">
+                    <div class="form">
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <img id="solid" class="eye-show" onclick="mostrarPWD()" src="./landing/favicon/eye-solid.svg" alt="Mostrar Contraseña">
+                            <img onclick="mostrarPWD()" style="visibility: hidden;" id="slash" class="eye-show" src="./landing/favicon/eye-slash-solid.svg" alt="Mostrar Contraseña">
+
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button onclick=Login() type="button" class="interaction log-in"><a href="./home.html">Log in</a></button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+    <script>
+        // ---- script show password ---- //
+        const eye_solid = document.getElementById('solid');
+        const eye_slash = document.getElementById('slash');
+
+        eye_solid.addEventListener('click', () => {
+            eye_slash.style.visibility = "visible";
+            eye_solid.style.visibility = "hidden"
+        });
+        eye_slash.addEventListener('click', () => {
+            eye_solid.style.visibility = "visible"
+            eye_slash.style.visibility = "hidden"
+        })
+
+        function mostrarPWD() {
+            var x = document.getElementById("exampleInputPassword1");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+</body>
+
+</html>

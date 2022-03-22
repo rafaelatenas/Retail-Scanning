@@ -1,0 +1,87 @@
+:root {
+    --moveAmount: -140px;
+    --timingFunction: "Fast Out, Linear In";
+    --duration: .5s;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    transform-style: preserve-3d;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    margin: 0% 2%;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    position: relative;
+    z-index: 900;
+}
+
+.slide {
+    animation-name: slide;
+    animation-duration: var(--duration);
+    animation-timing-function: var(--timingFunction);
+    z-index: 900;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+    100% {
+        transform: translateX(var(--moveAmount));
+        -webkit-transform: translateX(var(--moveAmount));
+    }
+}
+
+.startOffset {
+    animation-name: startOffset;
+    animation-duration: var(--duration);
+    animation-timing-function: var(--timingFunction);
+    z-index: 900;
+}
+
+@keyframes startOffset {
+    0% {
+        transform: translateX(var(--moveAmount));
+        -webkit-transform: translateX(var(--moveAmount));
+    }
+    100% {
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+    }
+}
+
+.example-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 110px;
+    height: 100%;
+}
+
+.example-item img {
+    min-width: 70px;
+    width: 70%;
+    height: 57%;
+}

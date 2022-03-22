@@ -1,0 +1,111 @@
+{
+
+    "RetailScanning": [{
+        "name": "Reporte Express",
+        "url": "Reporte-Express/Restail-Scanning",
+        "reporteuno": [{
+            "name": "Reporte Semanal",
+            "url": "Reporte/Semanal"
+        }],
+        "reportedos": [{
+            "name": "Reporte Mensual",
+            "url": "Reporte/Mensual"
+        }],
+        "reportetres": [{
+            "name": "Money Market",
+            "url": "Money/Market"
+        }],
+        "reportecuatro": [{
+            "name": "Prime Storage",
+            "url": "Prime/Storage"
+        }],
+        "accesorapido": [{
+            "acceso1": [{
+                "name": "Share",
+                "url": "/Share",
+                "img": "/landing/Images/icon-cuota-de-mercado.png",
+                "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore nisi impedit sunt aliquid deserunt facere aut voluptatem consectetur."
+            }],
+            "acceso2": [{
+                "name": "Distribución",
+                "url": "/Distribucion",
+                "img": "/landing/Images/icon-penetracion.png",
+                "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore nisi impedit sunt aliquid deserunt facere aut voluptatem consectetur."
+            }],
+            "acceso3": [{
+                "name": "Ventas",
+                "url": "/Ventas",
+                "img": "/landing/Images/icon-penetracion.png",
+                "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore nisi impedit sunt aliquid deserunt facere aut voluptatem consectetur."
+            }],
+            "acceso4": [{
+                "name": "Precio",
+                "url": "/Precio",
+                "img": "/landing/Images/icon-precio.png",
+                "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore nisi impedit sunt aliquid deserunt facere aut voluptatem consectetur."
+            }]
+        }],
+        "favicon": [{
+            "name": "info",
+            "img": "/landing/favicon/circle-info-solid.svg"
+        }]
+
+    }],
+    "HomePantry": [{
+
+        "name": "Reporte Express",
+        "url": "Reporte-Express/Home-Pantry",
+        "reporteuno": [{
+            "name": "Reporte Semanal",
+            "url": "Reporte/Semanal"
+        }],
+        "reportedos": [{
+            "name": "Reporte Mensual",
+            "url": "Reporte/Mensual"
+        }],
+        "accesorapido": [{
+            "acceso1": [{
+                "name": "Penetración",
+                "url": "/Penetracion",
+                "img": "/landing/Images/icon-penetracion.png",
+                "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore nisi impedit sunt aliquid deserunt facere aut voluptatem consectetur."
+            }],
+            "acceso2": [{
+                "name": "Cuota de Mercado",
+                "url": "/Cuota-de-Mercado",
+                "img": "/landing/Images/icon-cuota-de-mercado.png",
+                "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore nisi impedit sunt aliquid deserunt facere aut voluptatem consectetur."
+            }],
+            "acceso3": [{
+                "name": "Precio",
+                "url": "/Precio",
+                "img": "/landing/Images/icon-precio.png",
+                "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore nisi impedit sunt aliquid deserunt facere aut voluptatem consectetur."
+            }],
+            "acceso4": [{
+                "name": "Recompra",
+                "url": "/Recompra",
+                "img": "/landing/Images/icon-recompra.png",
+                "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolore nisi impedit sunt aliquid deserunt facere aut voluptatem consectetur."
+            }]
+        }],
+        "favicon": [{
+            "name": "info",
+            "img": "/landing/favicon/circle-info-solid.svg"
+        }]
+    }],
+    "Execution": [{
+        "reporteuno": [{
+            "principal": "Censo",
+            "url": "Reporte/Censo"
+        }],
+        "reportedos": [{
+            "principal": "POV",
+            "url": "Reporte/POV"
+        }],
+        "favicon": [{
+            "name": "info",
+            "img": "/landing/favicon/circle-info-solid.svg"
+        }]
+    }]
+}

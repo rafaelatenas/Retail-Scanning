@@ -1,0 +1,638 @@
+@font-face {
+    font-family: 'Lucida-Sans-Demibold-Roman';
+    src: url(../fonts/Lucida\ Sans\ Demibold\ Roman.ttf) format('TRUETYPE');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    font-family: Lucida-Sans-Demibold-Roman, sans-serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(6, 41, 78);
+    background: linear-gradient(180deg, rgba(6, 41, 78, 1) 0%, rgba(6, 51, 97, 1) 7%, rgba(9, 61, 113, 0.9724264705882353) 12%, rgba(3, 69, 124, 0.9948354341736695) 16%, rgba(3, 80, 143, 1) 24%, rgba(3, 80, 143, 1) 74%, rgba(10, 70, 128, 0.97) 84%, rgba(9, 61, 113, 0.98) 90%, rgba(6, 51, 97, 1) 95%, rgba(6, 41, 78, 1) 100%);
+}
+
+
+/* Media query for Tablet and Movile */
+
+@media screen and (max-width: 992px) {
+    /*Carousel Style*/
+    .container {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-carousel {
+        --card-width: 80%;
+        --card-max-width: 40%;
+        --card-height: 250px;
+        --carousel-min-width: 600px;
+        z-index: 1;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: var(--card-height);
+        min-width: var(--carousel-min-width);
+        transition: filter .3s ease;
+    }
+    .card-carousel.smooth-return {
+        transition: all .2s ease;
+    }
+    .card-carousel .card {
+        background: #fff;
+        width: var(--card-width);
+        max-width: var(--card-max-width);
+        padding: 1em;
+        min-width: 250px;
+        height: var(--card-height);
+        position: absolute;
+        margin: 0 auto;
+        color: rgba(0, 0, 0, .5);
+        transition: inherit;
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+        border-radius: 1em;
+        filter: brightness(.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card.highlight {
+        filter: brightness(1)
+    }
+    .image-container {
+        width: 100%;
+        height: 100%;
+        max-width: 200px;
+        min-width: 170px;
+        max-height: 160px;
+        position: relative;
+        min-height: 150px;
+        display: flex;
+    }
+    .image-container img {
+        width: 100%;
+        height: 100%;
+    }
+    #menuHP,
+    #menuEx,
+    #menuRSc,
+    #menuCI {
+        display: none;
+    }
+    /*End to Carousel*/
+    /*Style of Elements*/
+    header {
+        width: 100%;
+        height: 20%;
+    }
+    .components-header {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-atenas {
+        display: none;
+    }
+    .Logo-atenas {
+        display: block;
+        width: 55%;
+        height: 80%;
+        margin-top: 2%;
+        min-width: 180px;
+        max-width: 280px;
+        max-height: 125px;
+        min-height: 115px;
+    }
+    .content-user {
+        display: none;
+    }
+    footer {
+        width: 100%;
+        height: 20%;
+        position: relative;
+        top: 10%;
+    }
+    .complementary-buttons {
+        display: none;
+    }
+    .bar-user {
+        width: 60%;
+        height: 45%;
+        background: #fff;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        position: relative;
+        top: 5%;
+        left: 20%;
+    }
+    .modificables {
+        width: 100%;
+        height: 50%;
+        background: #F6B232;
+        position: relative;
+        top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .back,
+    .home,
+    .config {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .back svg,
+    .config svg,
+    .home svg {
+        width: 65%;
+        height: 65%;
+        fill: #e88100
+    }
+    .config svg {
+        width: 50%;
+        height: 50%;
+    }
+    .home svg path {
+        width: 100%;
+        height: 100%;
+    }
+    .swap {
+        -webkit-animation-name: swap;
+        animation-name: swap;
+    }
+    @-webkit-keyframes swap {
+        0% {
+            opacity: 0;
+            transform-origin: 0 100%;
+            transform: scale(0, 0) translate(-700px, 0px);
+        }
+        100% {
+            opacity: 1;
+            transform-origin: 100% 100%;
+            transform: scale(1, 1) translate(0px, 0px);
+        }
+    }
+    @keyframes swap {
+        0% {
+            opacity: 0;
+            transform-origin: 0 100%;
+            transform: scale(0, 0) translate(-700px, 0px);
+        }
+        100% {
+            opacity: 1;
+            transform-origin: 100% 100%;
+            transform: scale(1, 1) translate(0px, 0px);
+        }
+    }
+}
+
+@media screen and (max-width: 992px) and (min-height: 750px) {
+    .card-carousel .card {
+        border-radius: 1.5em;
+    }
+    .bar-user {
+        border-top-left-radius: 1.5em;
+        border-top-right-radius: 1.5em;
+    }
+    .back,
+    .home,
+    .config {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+/* Media query for Netbock and Desktop */
+
+@media screen and (min-width: 993px) {
+    header {
+        width: 100%;
+        height: 20%;
+    }
+    .components-header {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .logo-atenas {
+        width: 100%;
+        height: 80%;
+        min-width: 100px;
+        max-width: 120px;
+        min-height: 90px;
+        max-height: 170px;
+        position: relative;
+        left: 5%;
+        display: block;
+    }
+    .Logo-atenas {
+        display: none;
+    }
+    .content-user {
+        width: 15%;
+        height: 10%;
+        background: #fff;
+        position: fixed;
+        left: 86%;
+        border-top-left-radius: 1.2em;
+        border-bottom-left-radius: 1.2em;
+        animation: logo;
+        animation-duration: 2.5s;
+        animation-timing-function: cubic-bezier(0.79, 1.4, 1, 1);
+    }
+    @keyframes logo {
+        0% {
+            left: 100%;
+        }
+        100% {
+            left: 86%;
+        }
+    }
+    .container {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-carousel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        height: 60%;
+    }
+    .card {
+        width: 20%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #Cexecution {
+        display: none;
+    }
+    .image-container {
+        width: 95%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: hsl(0, 0%, 100%);
+        border-radius: 1em;
+    }
+    .image-container img {
+        width: 70%;
+        height: 70%;
+        min-width: 113px;
+        min-height: 90px;
+        max-width: 235px;
+        max-height: 186px;
+    }
+    .card:first-child img {
+        width: 75%;
+        height: 55%;
+    }
+    .card:last-child img {
+        width: 70%;
+        height: 80%;
+        min-width: 120px;
+        max-width: 135px;
+    }
+    footer {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        background: #fff;
+    }
+    .bar-user {
+        display: none;
+    }
+    .complementary-buttons {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-250px * 7));
+        }
+    }
+    .slider {
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .slider::before,
+    .slider::after {
+        background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 100%;
+        position: absolute;
+        width: 250px;
+        z-index: 2;
+    }
+    .slider::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+    .slider::before {
+        left: 0;
+        top: 0;
+    }
+    .slider .slide-track {
+        animation: scroll 30s linear infinite;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: calc(250px * 14);
+        height: 100%;
+    }
+    .slider .slide {
+        height: 80%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slide img {
+        width: 100%;
+        height: 100%;
+    }
+    /* fin del carousel*/
+    .buttons-of-services {
+        width: 90%;
+        height: 100%;
+        position: relative;
+    }
+    #arrow-left,
+    #arrow-right {
+        width: 5%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    #arrow-left img,
+    #arrow-right img {
+        width: 45%;
+        height: 35%;
+    }
+    #menuHP,
+    #menuEx,
+    #menuRSc,
+    #menuCI {
+        width: 20%;
+        height: 15%;
+    }
+    .deplegable {
+        position: absolute;
+        top: 63%;
+        width: 16%;
+        height: 30%;
+        border-radius: 1em;
+        background: #1f1f1f;
+        opacity: .8;
+        color: #fff;
+        z-index: 20;
+        overflow: visible;
+    }
+    .container-desplegable {
+        width: 80%;
+        height: 80%;
+        font-size: 12px;
+        text-align: left;
+        line-height: 180%;
+        margin: 10%;
+        overflow: visible;
+    }
+    .content-desplegable {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: visible;
+    }
+    .content-desplegable a {
+        text-decoration: none;
+        padding-left: 5%;
+        color: #fff;
+    }
+    #flags,
+    #elementos,
+    #elementosExecution {
+        text-decoration: none;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        overflow: visible;
+    }
+    #elementos {
+        height: 80%;
+    }
+    .efect:hover {
+        transform: scale( 1.5);
+        margin-left: 15%;
+    }
+    .content-desplegable hr {
+        width: 100%;
+        height: 1px;
+        opacity: .4;
+    }
+    #desplegableRSc {
+        left: 31.5%;
+    }
+    #desplegableHP {
+        height: 20%;
+        left: 53%;
+    }
+    #desplegableHP .container-desplegable,
+    #desplegableEx .container-desplegable,
+    #desplegableCI .container-desplegable {
+        height: 70%;
+    }
+    #desplegableEx .content-desplegable {
+        height: 70%;
+    }
+    #desplegableCI .content-desplegable {
+        height: 70%;
+    }
+    #desplegableEx {
+        left: 10%;
+        height: 20%;
+    }
+    #desplegableCI {
+        left: 74%;
+        height: 20%;
+    }
+    .heart {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        /* Animation */
+        transform: scale(1);
+        animation: pulse 2s linear infinite;
+    }
+    .heart::after {
+        /* background:blue; */
+        background: inherit;
+        border-radius: 50%;
+        /* To make circle */
+        content: '';
+        position: absolute;
+        /* top: -100px;*/
+        top: -50%;
+        /* Inherit properties of parent */
+        /* left: -100px; */
+        left: 0;
+        height: 100px;
+        width: 100px;
+    }
+    .heart::before {
+        /*  background:green; */
+        background: inherit;
+        border-radius: 50%;
+        /* To make circle */
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -50%;
+        /* Inherit properties of parent */
+        height: 100px;
+        width: 100px;
+    }
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            opacity: 0;
+        }
+        /*
+        10% {
+            transform: rotate(-45deg) scale(1.3);
+        }
+        20% {
+            transform: rotate(-45deg) scale(0.9);
+        }
+        30% {
+            transform: rotate(-45deg) scale(1.2);
+        }
+        40% {
+            transform: rotate(-45deg) scale(0.9);
+        }*/
+        50% {
+            transform: scale(1.3);
+            opacity: 1;
+        }
+        /*
+        60% {
+            transform: rotate(-45deg) scale(0.95);
+        }
+        70% {
+            transform: rotate(-45deg) scale(1);
+        } */
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+
+/*Breack Point for the style modicated*/
+
+@media screen and (min-width: 1600px) {
+    .image-container {
+        border-radius: 2em;
+    }
+    .image-container img {
+        height: 72%;
+    }
+    .card:first-child img {
+        width: 72%;
+        height: 57%;
+    }
+    .card:last-child img {
+        width: 75%;
+        height: 80%;
+        max-width: 228px;
+        max-height: 215px;
+    }
+    .content-desplegable {
+        font-size: 18px;
+    }
+    .logo-atenas {
+        max-width: 170px;
+        max-height: 170px;
+    }
+}
+
+
+/* Hide the images by default */
+
+.mySlides {
+    display: none;
+}
+
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
